@@ -18,12 +18,14 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+/* Lock the page to the viewport width on every device so nothing
+   can create a horizontal scroll / left-shift on phones. */
+html, body { max-width: 100%; overflow-x: hidden; }
 html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   background: var(--cream);
   color: var(--ink);
-  overflow-x: hidden;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -46,6 +48,29 @@ input, select, textarea { font-family: var(--font-body); }
 
 .container { width: min(1150px, 92%); margin: 0 auto; }
 
+/* ---------- Large screens · 4K · 8K ----------
+   The whole type scale uses rem + clamp(), so scaling the root
+   font-size scales every heading, label and body line together,
+   and we widen the container to match. This keeps the site from
+   shrinking into a narrow centred column on big/high-res displays
+   while phones/tablets stay driven by the max-width queries. */
+@media (min-width: 1600px) {
+  :root { font-size: 17px; }
+  .container { width: min(1320px, 86%); }
+}
+@media (min-width: 2000px) {
+  :root { font-size: 18.5px; }
+  .container { width: min(1560px, 82%); }
+}
+@media (min-width: 2560px) { /* 4K */
+  :root { font-size: 21px; }
+  .container { width: min(2040px, 80%); }
+}
+@media (min-width: 3800px) { /* 5K – 8K */
+  :root { font-size: 30px; }
+  .container { width: min(3200px, 76%); }
+}
+
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   padding: 15px 34px; border-radius: 50px;
@@ -67,8 +92,6 @@ input, select, textarea { font-family: var(--font-body); }
 .btn-ghost:hover { background: var(--coffee); color: var(--cream); transform: translateY(-3px); }
 .btn-ghost.light { border-color: var(--gold-soft); color: var(--gold-soft); }
 .btn-ghost.light:hover { background: var(--gold-soft); color: var(--coffee); }
-.btn-dark { background: var(--coffee); color: var(--cream); }
-.btn-dark:hover { background: var(--gold); color: var(--coffee); transform: translateY(-3px); }
 
 /* Scroll-reveal animation */
 .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s ease, transform 0.9s ease; }

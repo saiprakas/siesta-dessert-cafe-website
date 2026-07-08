@@ -16,42 +16,63 @@ import "./styles/home.css";
 const SHOWCASE = [
   {
     icon: "cake",
-    img: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80",
+    img: "./images/cakes.jpg",
     tag: "Artisan Cakes",
     title: "Cakes Worth Celebrating",
     text: "From classic chocolate to red velvet and tiramisu — baked fresh, frosted by hand, made for your moments."
   },
   {
     icon: "waffle",
-    img: "https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=900&q=80",
+    img: "./images/waffles.jpg",
     tag: "Belgian Waffles",
     title: "Waffles, Pressed to Order",
     text: "Golden and crisp outside, soft inside — crowned with chocolate, berries, Biscoff and everything nice."
   },
   {
     icon: "cupcake",
-    img: "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80",
+    img: "./images/signature-dessert.jpg",
     tag: "Signature Desserts",
     title: "Handcrafted Indulgence",
     text: "Tres leches, Biscoff cheesecake, fudgy brownies and our signature delights — crafted in small batches daily."
   },
   {
     icon: "pizza",
-    img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80",
+    img: "./images/pizzas.jpg",
     tag: "Fresh & Cheesy",
-    title: "Pizzas & Comfort Food",
-    text: "Hand-stretched pizzas, grilled sandwiches and creamy pastas — 100% vegetarian, always."
+    title: "Wood-Fired Style Pizzas",
+    text: "Hand-stretched and loaded with cheese and fresh veggies — baked bubbling, golden and 100% vegetarian."
+  },
+  {
+    icon: "burger",
+    img: "./images/burgers.jpg",
+    tag: "Loaded & Juicy",
+    title: "Burgers Stacked Right",
+    text: "Crispy veg patties, melty cheese and house-made sauces in a toasted bun — comfort you can hold."
+  },
+  {
+    icon: "sandwich",
+    img: "./images/sandwiches.jpg",
+    tag: "Grilled Fresh",
+    title: "Sandwiches, Warm & Melty",
+    text: "Grilled paninis, cheesy clubs and veggie stacks — pressed golden and served piping hot."
+  },
+  {
+    icon: "pasta",
+    img: "./images/pastas.jpg",
+    tag: "Creamy & Cheesy",
+    title: "Pastas Done Right",
+    text: "Silky Alfredo, tangy arrabbiata and cheesy bakes — twirled fresh to order, always vegetarian."
   },
   {
     icon: "shake",
-    img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=900&q=80",
+    img: "./images/shakes.jpg",
     tag: "Thick & Dreamy",
     title: "Shakes & Thickshakes",
     text: "Blended thick, topped generously, served ice-cold — from Belgian chocolate to Nutella latte."
   },
   {
     icon: "noodles",
-    img: "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=900&q=80",
+    img: "./images/maggie.jpg",
     tag: "Comfort Bowls",
     title: "Café-Style Maggie & More",
     text: "From classic masala to Korean-style and cheesy paneer — 20 ways to relive your favourite comfort food."
@@ -179,7 +200,7 @@ export default function Home() {
           <div className="hero-visual">
             <div className="hero-frame">
               <FoodImg
-                src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80"
+                src="./images/hero-cake.jpg"
                 icon="cake"
                 iconSize={110}
                 alt="Freshly baked celebration cake at Siesta"
@@ -189,7 +210,7 @@ export default function Home() {
             </div>
             <div className="hero-mini">
               <FoodImg
-                src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=500&q=80"
+                src="./images/waffles.jpg"
                 icon="waffle"
                 iconSize={40}
                 alt="Belgian waffle at Siesta"
@@ -225,20 +246,11 @@ export default function Home() {
           <Reveal className="about-art">
             <div className="about-photo">
               <FoodImg
-                src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80"
+                src="./images/about-brownie.jpg"
                 icon="cake"
                 iconSize={80}
                 alt="Freshly baked treats at Siesta"
                 className="about-main"
-              />
-            </div>
-            <div className="about-float">
-              <FoodImg
-                src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=500&q=80"
-                icon="cupcake"
-                iconSize={44}
-                alt="Dessert close-up"
-                className="about-small"
               />
             </div>
             <div className="stamp">
@@ -264,7 +276,7 @@ export default function Home() {
         <div className="container">
           <Reveal className="sec-head">
             <span className="kicker">A Peek Into Our World</span>
-            <h2>Six Reasons to Treat Yourself Today</h2>
+            <h2>Nine Reasons to Treat Yourself Today</h2>
             <p>Everything here is made in small batches, the slow way — because shortcuts never tasted this good. Visit us and scan the QR at your table for the full menu with today's specials.</p>
             <div className="divider">✦</div>
           </Reveal>
@@ -284,7 +296,7 @@ export default function Home() {
             <Reveal className="show-wide">
               <div className="imgwrap wide-img">
                 <FoodImg
-                  src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=900&q=80"
+                  src="./images/hero-cake.jpg"
                   icon="cake"
                   iconSize={90}
                   alt="Celebration cake from Siesta"
