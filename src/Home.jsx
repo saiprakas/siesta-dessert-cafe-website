@@ -39,7 +39,7 @@ const SHOWCASE = [
     icon: "pizza",
     img: "./images/pizzas.jpg",
     tag: "Fresh & Cheesy",
-    title: "Wood-Fired Style Pizzas",
+    title: "New York Style Pizza",
     text: "Hand-stretched and loaded with cheese and fresh veggies — baked bubbling, golden and 100% vegetarian."
   },
   {
