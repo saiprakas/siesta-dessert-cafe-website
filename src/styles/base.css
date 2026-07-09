@@ -120,8 +120,11 @@ input, select, textarea { font-family: var(--font-body); }
 .tag-chefs-special { background: #ece9fb; color: #5b4bb7; border: 1px solid #d8d2f2; }
 .tag-new { background: #e5f6ea; color: #1e7d38; border: 1px solid #c2e6cd; }
 
-/* Simple fade for page loads */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+/* Simple fade for page loads. Opacity-only on purpose: a transform
+   here would leave an identity matrix on .home-page (via fill-mode),
+   which becomes the containing block for the fixed mobile menu and
+   pushes it off-screen. Keep it transform-free. */
+@keyframes fadeUp { from { opacity: 0; } to { opacity: 1; } }
 .fade-in { animation: fadeUp 0.6s ease both; }
 
 /* Loading screen */
