@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://siestacafe.in/sitemap.xml
+Sitemap: https://www.siestadessertcafe.in/sitemap.xml
